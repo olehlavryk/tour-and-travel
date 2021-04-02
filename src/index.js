@@ -5,9 +5,18 @@ import { Normalize } from 'styled-normalize'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const Global = createGlobalStyle`
+  .App {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  a {
+    transition: ${props => props.theme.transition.default}
+  }
+
   .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -23,26 +32,31 @@ const Global = createGlobalStyle`
   }
   @media (min-width: 1200px) {
     .container {
-      width: 1110px;
+      width: 1120px;
     }
   }
 
   .row {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -50px;
+    margin-right: -50px;
   }
 `;
 
 const theme = {
-  color: {
+  colors: {
     primary: '#000',
     secondary: '#7D7987',
-    accent: '#FB8F1D'
+    accent: '#FB8F1D',
+    accentSecondary: '#1ABE84',
+    lightGrey: '#B8BECD',
   },
   fonts: {
     primary: 'Playfair Display, serif',
     secondry: 'Mulish, sans- serif',
     tertiary: 'Inter, sans- serif',
+  },
+  transition: {
+    default: 'all 300ms ease-in'
   }
 }
 
