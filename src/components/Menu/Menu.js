@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mainMenuList } from 'src/config/config'
+import { mainMenuList } from 'src/config/config';
 const Menu = () => {
     return (
         <StyledMenu>

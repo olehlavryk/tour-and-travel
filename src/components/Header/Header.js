@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import Flex from 'src/components/Flex/Flex'
-import Navigation from 'src/components/Navigation/Navigation'
-import Logo from 'src/components/Logo/Logo'
+import Flex from 'src/components/Flex/Flex';
+import Navigation from 'src/components/Navigation/Navigation';
+import Logo from 'src/components/Logo/Logo';
+import Row from 'src/components/Row/Row';
+import Container from 'src/components/Container/Container';
 
 const StyledHeader = styled.header`
     margin-top: 43px;
@@ -11,14 +13,14 @@ const StyledHeader = styled.header`
 const Header = () => {
     return (
         <StyledHeader>
-            <div className="container">
-                <div className="row">
+            <Container>
+                <Row>
                     <Flex justify="space-between">
                         <Logo />
                         <Navigation />
                     </Flex>
-                </div>
-            </div>
+                </Row>
+            </Container>
         </StyledHeader>
 
 

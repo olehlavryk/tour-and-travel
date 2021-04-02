@@ -10,36 +10,22 @@ const Global = createGlobalStyle`
     overflow: hidden;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+  }
+
   a {
-    transition: ${props => props.theme.transition.default}
+    transition: ${props => props.theme.transition.default};
+    text-decoration: none;
   }
 
-  .container {
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      width: 960px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .container {
-      width: 1120px;
-    }
-  }
-
-  .row {
-    margin-left: -50px;
-    margin-right: -50px;
-  }
 `;
 
 const theme = {
