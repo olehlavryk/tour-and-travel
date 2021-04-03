@@ -39,8 +39,8 @@ const theme = {
   },
   fonts: {
     primary: 'Playfair Display, serif',
-    secondry: 'Mulish, sans- serif',
-    tertiary: 'Inter, sans- serif',
+    secondary: 'Mulish, sans-serif',
+    tertiary: 'Inter, sans-serif',
   },
   transition: {
     default: 'all 300ms ease-in'

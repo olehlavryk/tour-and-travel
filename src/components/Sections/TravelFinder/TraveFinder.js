@@ -150,9 +150,9 @@ const FinderSelectsBox = styled.div`
 
 const StyledTravelFinderRight = styled.section`
     img {
-        width: calc(100% + 100px);
+        width: calc(100% + 70px);
         height: auto;
         position: relative;
-        margin-right: -100px;
+        margin-right: -70px;
     }
 `;

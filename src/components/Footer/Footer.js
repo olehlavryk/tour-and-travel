@@ -116,7 +116,7 @@ const StyledFooterTopLeft = styled.div`
     width: 100%;
 
     p {
-        font-family: Mulish;
+        font-family: ${props => props.theme.fonts.tertiary || 'sans- serif'};
         font-weight: 300;
         font-size: 18px;
         line-height: 1.6;
@@ -139,7 +139,7 @@ const StyledFooterTopRight = styled.div`
 
 
 const ListTitle = styled.h6`
-    font-family: Mulish;
+    font-family: ${props => props.theme.fonts.tertiary || 'sans- serif'};
     font-size: 19px;
     line-height: 1.3;
     font-weight: 700;
@@ -153,7 +153,7 @@ const FooterList = styled.ul`
 
         a {
             display: inline-block;
-            font-family: Mulish;
+            font-family: ${props => props.theme.fonts.tertiary || 'sans- serif'};
             font-size: 18px;
             font-weight: 300;
             color: #848484;
