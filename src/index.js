@@ -5,11 +5,6 @@ import { Normalize } from 'styled-normalize'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const Global = createGlobalStyle`
-  .App {
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
   ul {
     list-style: none;
     padding: 0;
@@ -24,6 +19,12 @@ const Global = createGlobalStyle`
   a {
     transition: ${props => props.theme.transition.default};
     text-decoration: none;
+  }
+
+  .img__responsive {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
 `;

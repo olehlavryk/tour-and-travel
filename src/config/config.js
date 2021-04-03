@@ -111,3 +111,31 @@ export const footerListRight = [
         name: "Food And Drink",
     },
 ];
+
+export const Locations = [
+    ,
+    { value: 'africa', label: 'Africa' },
+    { value: 'antarctica', label: 'Antarctica' },
+    { value: 'asia', label: 'Asia' },
+    { value: 'america', label: 'America' },
+    { value: 'europe', label: 'Europe' },
+];
+
+export const Activity = [
+    { value: 'tour', label: 'Tour' },
+    { value: 'hiking', label: 'Hiking' },
+    { value: 'ski', label: 'Ski' },
+]
+
+export const Grade = [
+    { value: 'all-inclusive', label: 'All inclusive' },
+    { value: 'premium', label: 'Premium' },
+    { value: 'econom', label: 'Econom' },
+]
+
+export const Participants = [
+    { value: 'single', label: 'Single' },
+    { value: 'two-persons', label: 'Two persons' },
+    { value: 'three-persons', label: 'Three-persons' },
+    { value: 'three-and-more', label: 'Three and more persons' },
+]

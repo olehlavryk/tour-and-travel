@@ -5,7 +5,7 @@ const Menu = () => {
         <StyledMenu>
             {mainMenuList.map((item, index) => (
                 <li key={item}>
-                    <a href="/#" class={index === 0 ? 'active' : ''}>{item}</a>
+                    <a href="/#" className={index === 0 ? 'active' : ''}>{item}</a>
                 </li>
             ))}
         </StyledMenu>

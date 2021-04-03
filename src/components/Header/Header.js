@@ -5,11 +5,6 @@ import Logo from 'src/components/Logo/Logo';
 import Row from 'src/components/Row/Row';
 import Container from 'src/components/Container/Container';
 
-const StyledHeader = styled.header`
-    margin-top: 43px;
-    padding-bottom: 20px;
-`;
-
 const Header = () => {
     return (
         <StyledHeader>
@@ -22,10 +17,12 @@ const Header = () => {
                 </Row>
             </Container>
         </StyledHeader>
-
-
     );
 }
 
 export default Header;
 
+const StyledHeader = styled.header`
+    margin-top: 43px;
+    padding-bottom: 20px;
+`;
