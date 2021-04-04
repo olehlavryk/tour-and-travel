@@ -4,6 +4,11 @@ import d2 from "./images/d2.png";
 import d3 from "./images/d3.png";
 import d4 from "./images/d4.png";
 
+import s1 from "./images/s1.png";
+import s2 from "./images/s2.png";
+import s3 from "./images/s3.png";
+import s4 from "./images/s4.png";
+
 
 export const mainMenuList = ["Home", "Destinations", "About", "Partner"];
 export const footerSocialList = [
@@ -172,5 +177,35 @@ export const DestinationsList = [
         title: 'Skadar',
         location: 'Montenegro',
         preview: d4
+    },
+];
+
+export const StoriesList = [
+    {
+        id: uuidv4(),
+        url: "/#",
+        title: 'The many benefits of taking a healing holiday',
+        description: 'Helaing holidays’ are on the rise tohelp maximise your health and happines..',
+        preview: s1
+    },
+    {
+        id: uuidv4(),
+        url: "/#",
+        title: 'The best Kyoto restaurant to try Japanese food',
+        description: 'From tofu to teahouses, here’s our guide to Kyoto’s best restaurants to visit...',
+        preview: s2
+    },
+    {
+        id: uuidv4(),
+        url: "/#",
+        title: 'Skip Chichen Itza and head to this remote Yucatan',
+        description: 'It’s remote and challenging to get, but braving the jungle and exploring these ruins without the...',
+        preview: s3
+    },
+    {
+        id: uuidv4(),
+        title: 'Surf’s up at these beginner spots around the world',
+        description: 'If learning to surf has in on your to-do list for a while, the good news is: it’s never too late...',
+        preview: s4
     },
 ]
