@@ -29,7 +29,7 @@ const customStyles = {
         fontSize: '15px',
         lineHeight: 1.2,
     }),
-    singleValue: provided => ({
+    valueContainer: provided => ({
         ...provided,
         color: '#4A4C53',
         paddingLeft: '21px',
@@ -41,60 +41,6 @@ const customStyles = {
     }),
 };
 
-
-const TravelFinder = () => {
-    return (
-        <StyledTravelFinder>
-            <Container>
-                <Row>
-                    <Flex justify="space-between">
-                        <StyledTravelFinderLeft>
-                            <FinderHeading>
-                                Explore and Travel
-                            </FinderHeading>
-                            <FinderBox>
-                                <FinderBoxHeading>
-                                    Holiday finder
-                                </FinderBoxHeading>
-                                <FinderSelectsBox>
-                                    <Flex justify="space-between">
-                                        <Select components={{
-                                            IndicatorSeparator: () => null
-                                        }} defaultValue={{ value: '', label: 'Location' }} options={Locations} styles={customStyles} />
-                                        <Select
-                                            components={{
-                                                IndicatorSeparator: () => null
-                                            }} defaultValue={{ value: '', label: 'Activity' }} options={Activity} styles={customStyles} />
-                                    </Flex>
-
-                                    <Flex justify="space-between">
-                                        <Select components={{
-                                            IndicatorSeparator: () => null
-                                        }} defaultValue={{ value: '', label: 'Grade' }} options={Grade} styles={customStyles} />
-                                        <Select components={{
-                                            IndicatorSeparator: () => null
-                                        }} defaultValue={{ value: '', label: 'Participants' }} options={Participants} styles={customStyles} />
-                                    </Flex>
-
-                                </FinderSelectsBox>
-                                <Button primary>
-                                    Explore
-                                </Button>
-                            </FinderBox>
-                        </StyledTravelFinderLeft>
-
-                        <StyledTravelFinderRight>
-                            <StyledPreview src={travel_finder} alt="Find your trip" />
-                        </StyledTravelFinderRight>
-                    </Flex>
-
-                </Row>
-            </Container>
-        </StyledTravelFinder>
-    );
-}
-
-export default TravelFinder;
 
 const StyledTravelFinder = styled.section`
     margin-top: 72px;
@@ -154,3 +100,57 @@ const StyledPreview = styled.img`
     position: relative;
     margin-right: -70px;
 `;
+
+const TravelFinder = () => {
+    return (
+        <StyledTravelFinder>
+            <Container>
+                <Row>
+                    <Flex justify="space-between">
+                        <StyledTravelFinderLeft>
+                            <FinderHeading>
+                                Explore and Travel
+                            </FinderHeading>
+                            <FinderBox>
+                                <FinderBoxHeading>
+                                    Holiday finder
+                                </FinderBoxHeading>
+                                <FinderSelectsBox>
+                                    <Flex justify="space-between">
+                                        <Select components={{
+                                            IndicatorSeparator: () => null
+                                        }} defaultValue={{ value: '', label: 'Location' }} options={Locations} styles={customStyles} />
+                                        <Select
+                                            components={{
+                                                IndicatorSeparator: () => null
+                                            }} defaultValue={{ value: '', label: 'Activity' }} options={Activity} styles={customStyles} />
+                                    </Flex>
+
+                                    <Flex justify="space-between">
+                                        <Select components={{
+                                            IndicatorSeparator: () => null
+                                        }} defaultValue={{ value: '', label: 'Grade' }} options={Grade} styles={customStyles} />
+                                        <Select components={{
+                                            IndicatorSeparator: () => null
+                                        }} defaultValue={{ value: '', label: 'Participants' }} options={Participants} styles={customStyles} />
+                                    </Flex>
+
+                                </FinderSelectsBox>
+                                <Button primary>
+                                    Explore
+                                </Button>
+                            </FinderBox>
+                        </StyledTravelFinderLeft>
+
+                        <StyledTravelFinderRight>
+                            <StyledPreview src={travel_finder} alt="Find your trip" />
+                        </StyledTravelFinderRight>
+                    </Flex>
+
+                </Row>
+            </Container>
+        </StyledTravelFinder>
+    );
+}
+
+export default TravelFinder;
