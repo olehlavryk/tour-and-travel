@@ -5,6 +5,7 @@ import Flex from 'src/components/Flex/Flex';
 import Paragraph from "src/components/Paragraph/Paragraph";
 import travel_story_img from './images/travel_story.png';
 import Button from 'src/components/Button/Button';
+import Heading from 'src/components/Heading/Heading';
 
 const TravelStory = () => {
     return (
@@ -13,16 +14,12 @@ const TravelStory = () => {
                 <Row>
                     <Flex justify="space-between" align="center">
                         <StyledLeftBox>
-                            <img
-                                src={travel_story_img}
-                                className="img__responsive"
-                                alt="Travel Story Image"
-                            />
+                            <StyledPreview src={travel_story_img} alt="A new way to explore the world" />
                         </StyledLeftBox>
                         <StyledRightBox>
-                            <StoryHeading>
+                            <Heading>
                                 A new way to explore the world
-                            </StoryHeading>
+                            </Heading>
                             <Paragraph>
                                 For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect
                                 trip, but now, they can also let Lonely Planet Experiences lead the way
@@ -47,19 +44,19 @@ const StyledLeftBox = styled.div`
     width: 50%;
 `;
 
-const StoryHeading = styled.h3`
-    font-family: ${props => props.theme.fonts.primary || 'serif'};
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.3;
-    color: ${props => props.theme.colors.primary || '#000'};
-    margin-bottom: 20px;
-`;
-
 const StyledRightBox = styled.div`
     width: 41.66666%;
 
     button:nth-of-type(1) {
         margin-top: 33px;
     }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 20px;
+    }
+`;
+
+const StyledPreview = styled.img`
+    width: 100%;
+    height: auto;
+    position: relative;
 `;

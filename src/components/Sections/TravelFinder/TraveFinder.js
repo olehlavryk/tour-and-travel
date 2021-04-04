@@ -5,7 +5,7 @@ import Container from 'src/components/Container/Container';
 import Button from 'src/components/Button/Button';
 import Select from 'react-select'
 import { Locations, Activity, Grade, Participants } from 'src/config/config';
-import travel_finder_image from "./images/travel_finder_image.png";
+import travel_finder from "./images/travel_finder.png";
 
 
 const customStyles = {
@@ -84,11 +84,7 @@ const TravelFinder = () => {
                         </StyledTravelFinderLeft>
 
                         <StyledTravelFinderRight>
-                            <img
-                                src={travel_finder_image}
-                                className="img__responsive"
-                                alt="Travel Finder Image"
-                            />
+                            <StyledPreview src={travel_finder} alt="Find your trip" />
                         </StyledTravelFinderRight>
                     </Flex>
 
@@ -111,7 +107,7 @@ const StyledTravelFinderLeft = styled.section`
 
 const FinderHeading = styled.h2`
     max-width: 450px;
-    font-family: 'Playfair Display';
+    font-family: ${props => props.theme.fonts.primary};
     font-weight: bold;
     font-size: 64px;
     line-height: 1.3;
@@ -149,10 +145,12 @@ const FinderSelectsBox = styled.div`
 `;
 
 const StyledTravelFinderRight = styled.section`
-    img {
-        width: calc(100% + 70px);
-        height: auto;
-        position: relative;
-        margin-right: -70px;
-    }
+
+`;
+
+const StyledPreview = styled.img`
+    width: calc(100% + 70px);
+    height: auto;
+    position: relative;
+    margin-right: -70px;
 `;
