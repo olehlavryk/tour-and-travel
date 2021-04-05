@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Icon } from "src/components/Icons/Icon";
-import Flex from 'src/components/Flex/Flex';
 import Row from 'src/components/Row/Row';
 import Container from 'src/components/Container/Container';
 import { footerSocialList, footerListLeft, footerListMiddle, footerListRight } from 'src/config/config';

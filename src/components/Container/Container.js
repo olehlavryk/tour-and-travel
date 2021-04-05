@@ -25,7 +25,7 @@ const StyledContainer = styled.div`
     }
 
     @media ${device.laptopM} {
-        width: 1120px;
+        width: 1000px;
         padding-right: 50px;
         padding-left: 50px;
     }

@@ -9,8 +9,8 @@ const Main = () => {
     return (
         <StyledMain>
             <TraveFinder />
-            {/* <TravelStory />
-            <Destinations />
+            <TravelStory />
+            {/* <Destinations />
             <Testimonials />
             <Stories /> */}
         </StyledMain>

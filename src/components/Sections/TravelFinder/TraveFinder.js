@@ -45,11 +45,25 @@ const customStyles = {
 
 const StyledTravelFinder = styled.section`
     margin-top: 72px;
-    margin-bottom: 282px;
+    margin-bottom: 200px;
+
+    @media ${device.tabletL} {
+        margin-bottom: 282px;
+    }
 `;
 
 const StyledTravelFinderLeft = styled.div`
+    @media ${device.mobileS} {
+        width: 100%;
+    }
 
+    @media ${device.tablet} {
+        width: 50%;
+    }
+
+    @media ${device.laptopM} {
+        width: 50%;
+    }
 `;
 
 const FinderHeading = styled.h2`
@@ -92,8 +106,15 @@ const FinderSelectsBox = styled.div`
 `;
 
 const StyledTravelFinderRight = styled.div`
+    @media ${device.mobileS} {
+        width: 100%;
+    }
 
-    @media ${device.tabletL} {
+    @media ${device.tablet} {
+        width: 40%;
+    }
+
+    @media ${device.laptopM} {
         width: 50%;
     }
 `;
@@ -104,7 +125,7 @@ const StyledPreview = styled.img`
     position: relative;
     margin-top: 50px;
 
-    @media ${device.laptopM} {
+    @media ${device.laptopL} {
         width: calc(100% + 70px);
         margin-right: -70px;
     }
@@ -120,9 +141,10 @@ const FinderWrapper = styled.div`
         justify-content: center;
     }
 
-    @media ${device.tabletL} {
+    @media ${device.tablet} {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 `;
 
