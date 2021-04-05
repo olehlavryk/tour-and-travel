@@ -12,7 +12,7 @@ const Main = () => {
             <TravelStory />
             <Destinations />
             <Testimonials />
-            {/*<Stories /> */}
+            <Stories />
         </StyledMain>
     );
 }

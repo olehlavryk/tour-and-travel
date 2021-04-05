@@ -3,11 +3,13 @@ import Heading from 'src/components/Heading/Heading';
 import Container from 'src/components/Container/Container';
 import Paragraph from "src/components/Paragraph/Paragraph";
 import { StoriesList } from 'src/config/config';
+import { device } from 'src/config/devices';
 
 const StyledStoriesHeader = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
 const StyledLink = styled.a`
@@ -33,17 +35,35 @@ const StyledLink = styled.a`
 `;
 
 const StyledStories = styled.section`
-    margin-bottom: 260px;
+    margin-bottom: 200px;
+
+    @media ${device.tabletL} {
+        margin-bottom: 282px;
+    }
 `;
 
 const StoriesListing = styled.div`
     margin-top: 56px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 `;
 
 const Story = styled.div`
-    width: calc(25% - 20px);
+    width: 100%;
+    margin-bottom: 50px;
+
+    @media ${device.mobileL} {
+        width: calc(50% - 10px);
+    }
+
+    @media ${device.tablet} {
+        width: calc(25% - 15px);
+    }
+
+    @media ${device.tabletL} {
+        width: calc(25% - 20px);
+    }
 `;
 
 const StoryPreview = styled.img`
@@ -81,6 +101,7 @@ const StoryReadMore = styled.a`
         color: ${props => props.theme.colors.accentSecondary};
     }
 `;
+
 
 const Stories = () => {
 
