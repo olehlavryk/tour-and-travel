@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Flex from 'src/components/Flex/Flex';
 import Row from 'src/components/Row/Row';
 import Container from 'src/components/Container/Container';
 import Button from 'src/components/Button/Button';

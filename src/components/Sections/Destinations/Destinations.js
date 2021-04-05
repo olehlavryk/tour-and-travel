@@ -114,7 +114,7 @@ const Destinations = () => {
 
                 <StyledDestinationsList>
                     {DestinationsList.map(item => (
-                        <Destination>
+                        <Destination key={item.id}>
                             <a href={item.url}>
                                 <DestinationPreview
                                     src={item.preview}

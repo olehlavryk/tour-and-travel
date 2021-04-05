@@ -118,7 +118,7 @@ const Stories = () => {
                 </StyledStoriesHeader>
                 <StoriesListing>
                     {StoriesList.map(item => (
-                        <Story>
+                        <Story key={item.id}>
                             <a href='/#'>
                                 <StoryPreview src={item.preview} alt={item.title} />
                             </a>

@@ -6,10 +6,10 @@ const BurgerMenu = () => {
     return (
         <Menu right>
             {mainMenuList.map((item) => (
-                <a href="/#">{item}</a>
+                <a href="/#" key="item">{item}</a>
             ))}
-            <a href="/#">Login</a>
-            <a href="/#">Register</a>
+            <a href="/#" key="Login">Login</a>
+            <a href="/#" key="Register">Register</a>
         </Menu>
     )
 }
