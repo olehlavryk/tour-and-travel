@@ -8,7 +8,11 @@ import Heading from 'src/components/Heading/Heading';
 import { device } from 'src/config/devices';
 
 const StyledTravelStory = styled.section`
-    margin: 0 0 265px 0;
+    margin-bottom: 200px;
+
+    @media ${device.tabletL} {
+        margin-bottom: 282px;
+    }
 `;
 
 const StyledLeftBox = styled.div`

@@ -10,8 +10,8 @@ const Main = () => {
         <StyledMain>
             <TraveFinder />
             <TravelStory />
-            {/* <Destinations />
-            <Testimonials />
+            <Destinations />
+            {/*<Testimonials />
             <Stories /> */}
         </StyledMain>
     );

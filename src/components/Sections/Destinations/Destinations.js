@@ -1,50 +1,8 @@
 import styled from 'styled-components';
 import Container from 'src/components/Container/Container';
-import Flex from 'src/components/Flex/Flex';
 import Heading from 'src/components/Heading/Heading';
 import { DestinationsList } from 'src/config/config';
-
-const Destinations = () => {
-    return (
-        <StyledDestinations>
-            <Container>
-                <header>
-                    <Flex justify="space-between" align="center">
-                        <Heading>
-                            Featured destinations
-                        </Heading>
-                        <StyledLink as="a" href='/#'>
-                            View all
-                        </StyledLink>
-                    </Flex>
-                </header>
-
-                <StyledDestinationsList>
-                    {DestinationsList.map(item => (
-                        <Destination>
-                            <a href={item.url}>
-                                <DestinationPreview
-                                    src={item.preview}
-                                    alt={`${item.title} | ${item.location}`}
-                                />
-                            </a>
-                            <DestinationText>
-                                <DestinationTitile>
-                                    {item.title}
-                                </DestinationTitile>
-                                <DestinationLocation>
-                                    {item.location}
-                                </DestinationLocation>
-                            </DestinationText>
-                        </Destination>
-                    ))}
-                </StyledDestinationsList>
-            </Container>
-        </StyledDestinations>
-    );
-}
-
-export default Destinations;
+import { device } from 'src/config/devices';
 
 const StyledDestinations = styled.section`
     margin-bottom: 262px;
@@ -54,11 +12,26 @@ const StyledDestinationsList = styled.ul`
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 `;
 
 const Destination = styled.li`
-    width: calc(25% - 20px);
+    width: 100%;
     position: relative;
+    margin-bottom: 20px;
+
+    @media ${device.mobileL} {
+        width: calc(50% - 10px);
+
+    }
+
+    @media ${device.tablet} {
+        width: calc(25% - 10px);
+    }
+
+    @media ${device.tabletL} {
+        width: calc(25% - 20px);
+    }
 `;
 
 const DestinationText = styled.div`
@@ -88,6 +61,8 @@ const DestinationLocation = styled.div`
 
 const DestinationPreview = styled.img`
     border-radius: 8px 8px 8px 0;
+    width: 100%;
+    height: auto;
 `;
 
 const StyledLink = styled.a`
@@ -111,4 +86,55 @@ const StyledLink = styled.a`
     }
 
 `;
+
+const FlexWrapper = styled.div`
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+`;
+
+const Destinations = () => {
+    return (
+        <StyledDestinations>
+            <Container>
+                <header>
+                    <FlexWrapper justify="space-between" align="center">
+                        <Heading>
+                            Featured destinations
+                        </Heading>
+                        <StyledLink as="a" href='/#'>
+                            View all
+                        </StyledLink>
+                    </FlexWrapper>
+                </header>
+
+                <StyledDestinationsList>
+                    {DestinationsList.map(item => (
+                        <Destination>
+                            <a href={item.url}>
+                                <DestinationPreview
+                                    src={item.preview}
+                                    alt={`${item.title} | ${item.location}`}
+                                />
+                            </a>
+                            <DestinationText>
+                                <DestinationTitile>
+                                    {item.title}
+                                </DestinationTitile>
+                                <DestinationLocation>
+                                    {item.location}
+                                </DestinationLocation>
+                            </DestinationText>
+                        </Destination>
+                    ))}
+                </StyledDestinationsList>
+            </Container>
+        </StyledDestinations>
+    );
+}
+
+export default Destinations;
+
+
 
