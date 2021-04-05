@@ -5,7 +5,11 @@ import { DestinationsList } from 'src/config/config';
 import { device } from 'src/config/devices';
 
 const StyledDestinations = styled.section`
-    margin-bottom: 262px;
+    margin-bottom: 200px;
+
+    @media ${device.tabletL} {
+        margin-bottom: 282px;
+    }
 `;
 
 const StyledDestinationsList = styled.ul`
@@ -22,7 +26,6 @@ const Destination = styled.li`
 
     @media ${device.mobileL} {
         width: calc(50% - 10px);
-
     }
 
     @media ${device.tablet} {

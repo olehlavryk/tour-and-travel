@@ -11,8 +11,8 @@ const Main = () => {
             <TraveFinder />
             <TravelStory />
             <Destinations />
-            {/*<Testimonials />
-            <Stories /> */}
+            <Testimonials />
+            {/*<Stories /> */}
         </StyledMain>
     );
 }

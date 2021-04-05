@@ -4,6 +4,7 @@ import Heading from 'src/components/Heading/Heading';
 import Slider from "react-slick";
 import stars from './images/stars.png';
 import author from './images/author.png';
+import { device } from 'src/config/devices';
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -41,18 +42,29 @@ const Arrow = styled.span`
 
 const StyledPrevArrow = styled(Arrow)`
     position: absolute;
-    right: calc(52px + 8.3333%);
+    right: 52px;
     bottom: 0;
+
+    @media ${device.laptopM} {
+        right: calc(52px + 8.3333%);
+    }
 `;
 const StyledNextArrow = styled(Arrow)`
     position: absolute;
-    right: 8.3333%;
+    right: 0;
     bottom: 0;
 
+    @media ${device.laptopM} {
+        right: 8.3333%;
+    }
 `;
 
 const StyledTestimonials = styled.section`
-    margin-bottom: 260px;
+    margin-bottom: 200px;
+
+    @media ${device.tabletL} {
+        margin-bottom: 282px;
+    }
 `;
 
 const SliderWrapper = styled.div`
@@ -64,12 +76,27 @@ const Testimonial = styled.div`
     outline: none;
     display: flex !important;
     justify-content: space-between;
-    align-items: center;
+
     position: realative;
+    flex-wrap: wrap;
 `;
 
 const TestimonialLeft = styled.div`
-    width: 41.6666%;
+    width: 100%;
+    margin-bottom: 0;
+
+    @media ${device.mobileS} {
+        margin-bottom: 30px;
+    }
+
+    @media ${device.mobileL} {
+        width: 47%;
+    }
+
+    @media ${device.tablet} {
+        width: 41.6666%;
+        align-items: center;
+    }
 `;
 
 const TestimonialRating = styled.img`
@@ -108,24 +135,44 @@ const TestimonialAuthorPosition = styled.div`
 `;
 
 const TestimonialRight = styled.div`
-    width: 33.3333%;
-    margin-right: 8.3333%;
+    width: 100%;
     position:relative;
+
+    @media ${device.mobileL} {
+        width: 45%;
+        /* width: 33.3333%; */
+    }
+
+    @media ${device.tablet} {
+        width: 33.3333%;
+    }
+
+    @media ${device.laptopM} {
+        margin-right: 8.3333%;
+    }
 `;
 
 const TestimonialAuthorPhoto = styled.img`
+    width: 100%;
+    height: auto;
+    display:block;
     border-radius: 8px 8px 0 0;
 `;
 
 const TestimonialControlsBox = styled.div`
-    width: 132px;
+    width: 112px;
     height: 60px;
     position: absolute;
-    right: 7.4%;
+    right: 0;
     bottom: 0;
     background-color: #fff;
     border-radius: 8px 0 0 0;
     z-index: 1;
+
+    @media ${device.laptopM} {
+        right: 7.4%;
+        width: 132px;
+    }
 `;
 const Testimonials = () => {
     const settings = {
