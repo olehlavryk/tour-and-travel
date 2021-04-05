@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const OutlinedButton = styled.button.attrs(props => ({ outlined: true }))`
     border:none;
     background-color: transparent;
-    font-family: ${props => props.theme.fonts.tertiary || 'sans- serif'};
+    font-family: ${props => props.theme.fonts.tertiary || 'sans-serif'};
     border: 1px solid ${props => props.theme.colors.accent || '#000'};
     color: ${props => props.theme.colors.accent || '#000'};
     border-radius: 8px;

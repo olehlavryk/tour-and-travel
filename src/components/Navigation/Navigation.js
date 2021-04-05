@@ -2,18 +2,6 @@ import styled from 'styled-components';
 import Button from 'src/components/Button/Button';
 import Menu from 'src/components/Menu/Menu';
 
-const Navigation = () => {
-    return (
-        <StyledNavigation>
-            <Menu />
-            <Button>Login</Button>
-            <Button primary>Register</Button>
-        </StyledNavigation>
-    );
-}
-
-export default Navigation;
-
 const StyledNavigation = styled.nav`
     display: flex;
     align-items: center;
@@ -29,4 +17,17 @@ const StyledNavigation = styled.nav`
     }
 
 `;
+
+const Navigation = () => {
+    return (
+        <StyledNavigation>
+            <Menu />
+            <Button>Login</Button>
+            <Button primary>Register</Button>
+        </StyledNavigation>
+    );
+}
+
+export default Navigation;
+
 

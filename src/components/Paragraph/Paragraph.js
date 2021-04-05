@@ -9,7 +9,7 @@ const Paragraph = (props) => {
 export default Paragraph;
 
 const StyledParagraph = styled.p`
-    font-family:  ${props => props.theme.fonts.secondary || 'sans- serif'};
+    font-family:  ${props => props.theme.fonts.secondary || 'sans-serif'};
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
