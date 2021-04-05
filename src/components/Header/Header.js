@@ -23,6 +23,6 @@ const Header = () => {
 export default Header;
 
 const StyledHeader = styled.header`
-    margin-top: 43px;
+    padding-top: 43px;
     padding-bottom: 20px;
 `;
