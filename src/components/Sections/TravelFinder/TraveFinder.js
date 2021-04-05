@@ -6,12 +6,13 @@ import Button from 'src/components/Button/Button';
 import Select from 'react-select'
 import { Locations, Activity, Grade, Participants } from 'src/config/config';
 import travel_finder from "./images/travel_finder.png";
+import { device } from 'src/config/devices';
 
 
 const customStyles = {
     container: provided => ({
         ...provided,
-        width: '46%',
+        //width: '46%',
         marginBottom: '35px',
     }),
     control: provided => ({
@@ -47,7 +48,7 @@ const StyledTravelFinder = styled.section`
     margin-bottom: 282px;
 `;
 
-const StyledTravelFinderLeft = styled.section`
+const StyledTravelFinderLeft = styled.div`
 
 `;
 
@@ -90,15 +91,66 @@ const FinderSelectsBox = styled.div`
     margin: 48px 0 13px 0;
 `;
 
-const StyledTravelFinderRight = styled.section`
+const StyledTravelFinderRight = styled.div`
 
+    @media ${device.tabletL} {
+        width: 50%;
+    }
 `;
 
 const StyledPreview = styled.img`
-    width: calc(100% + 70px);
+    width: 100%;
     height: auto;
     position: relative;
-    margin-right: -70px;
+    margin-top: 50px;
+
+    @media ${device.laptopM} {
+        width: calc(100% + 70px);
+        margin-right: -70px;
+    }
+`;
+
+const FinderWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media ${device.mobileS} {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media ${device.tabletL} {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+`;
+
+const SelectsWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media ${device.mobileS} {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media ${device.mobileL} {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    & > div {
+
+        @media ${device.mobileS} {
+            width: 100%;
+        }
+
+        @media ${device.mobileL} {
+            width: 46%;
+        }
+    }
 `;
 
 const TravelFinder = () => {
@@ -106,7 +158,7 @@ const TravelFinder = () => {
         <StyledTravelFinder>
             <Container>
                 <Row>
-                    <Flex justify="space-between">
+                    <FinderWrapper>
                         <StyledTravelFinderLeft>
                             <FinderHeading>
                                 Explore and Travel
@@ -116,7 +168,7 @@ const TravelFinder = () => {
                                     Holiday finder
                                 </FinderBoxHeading>
                                 <FinderSelectsBox>
-                                    <Flex justify="space-between">
+                                    <SelectsWrapper>
                                         <Select components={{
                                             IndicatorSeparator: () => null
                                         }} defaultValue={{ value: '', label: 'Location' }} options={Locations} styles={customStyles} />
@@ -124,16 +176,16 @@ const TravelFinder = () => {
                                             components={{
                                                 IndicatorSeparator: () => null
                                             }} defaultValue={{ value: '', label: 'Activity' }} options={Activity} styles={customStyles} />
-                                    </Flex>
+                                    </SelectsWrapper>
 
-                                    <Flex justify="space-between">
+                                    <SelectsWrapper>
                                         <Select components={{
                                             IndicatorSeparator: () => null
                                         }} defaultValue={{ value: '', label: 'Grade' }} options={Grade} styles={customStyles} />
                                         <Select components={{
                                             IndicatorSeparator: () => null
                                         }} defaultValue={{ value: '', label: 'Participants' }} options={Participants} styles={customStyles} />
-                                    </Flex>
+                                    </SelectsWrapper>
 
                                 </FinderSelectsBox>
                                 <Button primary>
@@ -145,7 +197,7 @@ const TravelFinder = () => {
                         <StyledTravelFinderRight>
                             <StyledPreview src={travel_finder} alt="Find your trip" />
                         </StyledTravelFinderRight>
-                    </Flex>
+                    </FinderWrapper>
 
                 </Row>
             </Container>

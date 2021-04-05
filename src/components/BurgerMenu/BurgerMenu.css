@@ -32,6 +32,12 @@
   top: 50px;
 }
 
+@media all and (max-width: 991px) {
+  .bm-burger-button {
+    right: 30px;
+  }
+}
+
 @media all and (min-width: 1200px) {
   .bm-burger-button {
     display: none;

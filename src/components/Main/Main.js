@@ -8,8 +8,8 @@ import Stories from 'src/components/Sections/Stories/Stories';
 const Main = () => {
     return (
         <StyledMain>
-            {/* <TraveFinder />
-            <TravelStory />
+            <TraveFinder />
+            {/* <TravelStory />
             <Destinations />
             <Testimonials />
             <Stories /> */}

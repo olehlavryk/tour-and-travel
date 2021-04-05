@@ -109,8 +109,6 @@ const ListTitle = styled.h6`
         width: 100%;
         text-align: left;
     }
-
-
 `;
 
 const FooterList = styled.ul`
