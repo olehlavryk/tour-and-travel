@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/tour-and-travel/static/css/main.3ec9a578.chunk.css",
+    "main.js": "/tour-and-travel/static/js/main.91182b60.chunk.js",
+    "main.js.map": "/tour-and-travel/static/js/main.91182b60.chunk.js.map",
+    "runtime-main.js": "/tour-and-travel/static/js/runtime-main.aae19a34.js",
+    "runtime-main.js.map": "/tour-and-travel/static/js/runtime-main.aae19a34.js.map",
+    "static/js/2.6c9f39b7.chunk.js": "/tour-and-travel/static/js/2.6c9f39b7.chunk.js",
+    "static/js/2.6c9f39b7.chunk.js.map": "/tour-and-travel/static/js/2.6c9f39b7.chunk.js.map",
+    "index.html": "/tour-and-travel/index.html",
+    "static/css/main.3ec9a578.chunk.css.map": "/tour-and-travel/static/css/main.3ec9a578.chunk.css.map",
+    "static/js/2.6c9f39b7.chunk.js.LICENSE.txt": "/tour-and-travel/static/js/2.6c9f39b7.chunk.js.LICENSE.txt",
+    "static/media/author.c0ce9b99.png": "/tour-and-travel/static/media/author.c0ce9b99.png",
+    "static/media/d1.3287c16b.png": "/tour-and-travel/static/media/d1.3287c16b.png",
+    "static/media/d2.e007cb39.png": "/tour-and-travel/static/media/d2.e007cb39.png",
+    "static/media/d3.bb52c9df.png": "/tour-and-travel/static/media/d3.bb52c9df.png",
+    "static/media/d4.6c15be70.png": "/tour-and-travel/static/media/d4.6c15be70.png",
+    "static/media/s1.be3a73af.png": "/tour-and-travel/static/media/s1.be3a73af.png",
+    "static/media/s2.a8fabae6.png": "/tour-and-travel/static/media/s2.a8fabae6.png",
+    "static/media/s3.204ceea5.png": "/tour-and-travel/static/media/s3.204ceea5.png",
+    "static/media/s4.e9a1e073.png": "/tour-and-travel/static/media/s4.e9a1e073.png",
+    "static/media/travel_finder.7636a7e8.png": "/tour-and-travel/static/media/travel_finder.7636a7e8.png",
+    "static/media/travel_story.55a23474.png": "/tour-and-travel/static/media/travel_story.55a23474.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aae19a34.js",
+    "static/js/2.6c9f39b7.chunk.js",
+    "static/css/main.3ec9a578.chunk.css",
+    "static/js/main.91182b60.chunk.js"
+  ]
+}
